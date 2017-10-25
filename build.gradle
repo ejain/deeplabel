@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+repositories {
+	jcenter()
+}
+
+ext {
+	dl4jVersion = '0.9.1'
+}
+
+dependencies {
+	compile "org.deeplearning4j:deeplearning4j-core:$dl4jVersion"
+	compile "org.nd4j:nd4j-native-platform:$dl4jVersion"
+	compile "org.deeplearning4j:deeplearning4j-zoo:$dl4jVersion"
+	compile "org.deeplearning4j:deeplearning4j-ui_2.10:$dl4jVersion"
+    compile "org.apache.tika:tika-parsers:1.16"
+	compile "com.google.guava:guava:23.1-jre"
+	compile "com.beust:jcommander:1.72"
+	testCompile "junit:junit:4.12"
+	testCompile "org.hamcrest:hamcrest-library:1.3"
+}
